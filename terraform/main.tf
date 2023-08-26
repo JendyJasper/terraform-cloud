@@ -108,3 +108,13 @@ module "RDS" {
   private_subnets = [module.VPC.private_subnets-3, module.VPC.private_subnets-4]
 }
 
+# The Module creates instances for jenkins, sonarqube abd jfrog
+module "compute" {
+  source          = "./modules/compute"
+  ami-jenkins     = var.ami
+  ami-sonar       = var.ami
+  ami-jfrog       = var.ami
+  subnets-compute = module.VPC.public_subnets-1
+  sg-compute      = [module.security.ALB-sg]
+  keypair         = var.keypair
+}
