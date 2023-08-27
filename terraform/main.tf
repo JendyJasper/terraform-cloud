@@ -66,26 +66,7 @@ module "security" {
 }
 
 
-module "AutoScaling" {
-  source            = "./modules/Autoscaling"
-  ami-web           = var.ami-web 
-  ami-bastion       = var.ami-bastion
-  ami-nginx         = var.ami-nginx  
-  desired_capacity  = 2
-  min_size          = 2
-  max_size          = 2
-  web-sg            = [module.security.web-sg]
-  bastion-sg        = [module.security.bastion-sg]
-  nginx-sg          = [module.security.nginx-sg]
-  wordpress-alb-tgt = module.ALB.wordpress-tgt
-  nginx-alb-tgt     = module.ALB.nginx-tgt
-  tooling-alb-tgt   = module.ALB.tooling-tgt
-  instance_profile  = module.VPC.instance_profile
-  public_subnets    = [module.VPC.public_subnets-1, module.VPC.public_subnets-2]
-  private_subnets   = [module.VPC.private_subnets-1, module.VPC.private_subnets-2]
-  keypair           = var.keypair
 
-}
 
 # Module for Elastic Filesystem; this module will creat elastic file system isn the webservers availablity
 # zone and allow traffic fro the webservers
