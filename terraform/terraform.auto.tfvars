@@ -12,7 +12,13 @@ preferred_number_of_private_subnets = "4"
 
 #environment = "production"
 
-ami = "ami-06640050dc3f556bb"
+ami-web = "ami-08286ffad102ad6ad"
+
+ami-bastion = "ami-086dd74f3787911a0"
+
+ami-nginx = "ami-0e4cb5deefe5d30ad"
+
+ami-sonar = "ami-0995428836e66b8cb"
 
 keypair = "Darey-AWS"
 
