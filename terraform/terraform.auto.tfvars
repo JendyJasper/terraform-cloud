@@ -20,6 +20,10 @@ ami-nginx = "ami-0e4cb5deefe5d30ad"
 
 ami-sonar = "ami-0995428836e66b8cb"
 
+ami-jfrog = "ami-0995428836e66b8cb"
+
+ami-jenkins = "ami-0995428836e66b8cb"
+
 keypair = "Darey-AWS"
 
 # Ensure to change this to your acccount number
