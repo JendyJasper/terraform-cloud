@@ -3,4 +3,4 @@
   user: ubuntu
   become: true
   roles:
-     - sonarqube
+    - sonarqube
