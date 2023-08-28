@@ -14,7 +14,7 @@ preferred_number_of_private_subnets = "4"
 
 ami-web = "ami-08286ffad102ad6ad"
 
-ami-bastion = "ami-0a57ffb6438c0b457"
+ami-bastion = "ami-01c9fbce980d000f0"
 
 ami-nginx = "ami-0e4cb5deefe5d30ad"
 
